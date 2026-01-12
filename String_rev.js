@@ -27,11 +27,28 @@ function isPalindrome(str) {
 }
 function findMax(arr) {
   if (!Array.isArray(arr) || arr.length === 0) return undefined;
-  return Math.max(...arr);
+
+  var max = arr[0]; 
+  for (var i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+
+  return max;
 }
 function removeDuplicates(arr) {
   if (!Array.isArray(arr)) return [];
-  return [...new Set(arr)];
+
+  var result = [];
+  for (var i = 0; i < arr.length; i++) {
+    var item = arr[i];
+    if (result.indexOf(item) === -1) {
+      result.push(item);
+    }
+  }
+
+  return result;
 }
 function sumArray(arr) {
   if (!Array.isArray(arr)) {
@@ -46,7 +63,15 @@ function sumArray(arr) {
 
 function findEvenNumbers(arr) {
   if (!Array.isArray(arr)) return [];
-  return arr.filter(num => num % 2 === 0);
+
+  var result = [];
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) { 
+      result.push(arr[i]);
+    }
+  }
+
+  return result;
 }
 function capitalizeWords(str) {
   if (typeof str !== 'string') {

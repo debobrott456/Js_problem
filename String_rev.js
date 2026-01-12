@@ -1,79 +1,77 @@
 
-// function reverseString(str) {
-//   return str.split('').reverse().join('');
-// }
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
 
-// function countVowels(str) {
-//   if (typeof str !== 'string') {
-//     return 0;
-//   }
-//   let count = 0;
-//   let lowerStr = str.toLowerCase();
-//   for (let i = 0; i < lowerStr.length; i++) {
-//     let char = lowerStr[i];
-//     if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
-//       count++;
-//     }
-//   }
+function countVowels(str) {
+  if (typeof str !== 'string') {
+    return 0;
+  }
+  let count = 0;
+  let lowerStr = str.toLowerCase();
+  for (let i = 0; i < lowerStr.length; i++) {
+    let char = lowerStr[i];
+    if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+      count++;
+    }
+  }
 
-//   return count;
-// }
-let str=5
-let result =pingPong()
-console.log(result)
+  return count;
+}
 
-// function isPalindrome(str) {
-//   if (typeof str !== 'string') return false;
-//   str = str.toLowerCase();
-//   return str === str.split('').reverse().join('');
-// }
-// function findMax(arr) {
-//   if (!Array.isArray(arr) || arr.length === 0) return undefined;
-//   return Math.max(...arr);
-// }
-// function removeDuplicates(arr) {
-//   if (!Array.isArray(arr)) return [];
-//   return [...new Set(arr)];
-// }
-// function sumArray(arr) {
-//   if (!Array.isArray(arr)) {
-//     return 0;
-//   }
-//   var sum = 0;
-//   for (var i = 0; i < arr.length; i++) {
-//     sum += arr[i]; 
-//   }
-//   return sum;
-// }
 
-// function findEvenNumbers(arr) {
-//   if (!Array.isArray(arr)) return [];
-//   return arr.filter(num => num % 2 === 0);
-// }
-// function capitalizeWords(str) {
-//   if (typeof str !== 'string') {
-//     return '';
-//   }
+function isPalindrome(str) {
+  if (typeof str !== 'string') return false;
+  str = str.toLowerCase();
+  return str === str.split('').reverse().join('');
+}
+function findMax(arr) {
+  if (!Array.isArray(arr) || arr.length === 0) return undefined;
+  return Math.max(...arr);
+}
+function removeDuplicates(arr) {
+  if (!Array.isArray(arr)) return [];
+  return [...new Set(arr)];
+}
+function sumArray(arr) {
+  if (!Array.isArray(arr)) {
+    return 0;
+  }
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    sum += arr[i]; 
+  }
+  return sum;
+}
 
-//   var words = str.split(' ');
-//   for (var i = 0; i < words.length; i++) {
-//     var word = words[i];
-//     if (word.length > 0) {
-//       words[i] = word[0].toUpperCase() + word.slice(1);
-//     }
-//   }
+function findEvenNumbers(arr) {
+  if (!Array.isArray(arr)) return [];
+  return arr.filter(num => num % 2 === 0);
+}
+function capitalizeWords(str) {
+  if (typeof str !== 'string') {
+    return '';
+  }
 
-//   return words.join(' ');
-// }
+  var words = str.split(' ');
+  for (var i = 0; i < words.length; i++) {
+    var word = words[i];
+    if (word.length > 0) {
+      words[i] = word[0].toUpperCase() + word.slice(1);
+    }
+  }
 
-// function factorial(n) {
-//   if (typeof n !== 'number' || n < 0) return undefined;
-//   let result = 1;
-//   for (let i = 2; i <= n; i++) {
-//     result *= i;
-//   }
-//   return result;
-// }
+  return words.join(' ');
+}
+
+function factorial(n) {
+  if (typeof n !== 'number' || n < 0) return undefined;
+  let result = 1;
+  for (let i = 2; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}
 function pingPong() {
   let result = [];
   for (let i = 1; i <= 20; i++) {
